@@ -50,9 +50,14 @@ async def on_message(message):
         return     
 
     if message.content.startswith('strange assign me'):
+        #msg = 'trying to add this role {0.author.roles}'.format(message)
+        #await client.send_message(message.channel, msg)   
+        role = '0x7f88982147c8'       
         msg = 'trying to add this role {0.author.roles}'.format(message)
-        await client.send_message(message.channel, msg)         
-        #print('role assignment')       
+        await client.add_roles(message.author, role)           
+        await client.send_message(message.channel, msg) 
+        print('role assignment')   
+        return
 
         
 '''        
