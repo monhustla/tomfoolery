@@ -19,8 +19,8 @@ async def on_message(message):
         #print(client.user)
         return
      
-     print(message.contents)
-     print(message.author)
+    print(message.contents)
+    print(message.author)
 
     if message.content.startswith('Strange '):
         msg = 'Hello {0.author.mention} I have been expecting you.'.format(message)
