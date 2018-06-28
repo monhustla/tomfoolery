@@ -10,7 +10,13 @@ TOKEN = "NDM2NjczODQzMTAxMTcxNzMy.DhXOtA.zHQKVp9UKeFrCisivE4uUhQykeQ"
 client = discord.Client()
 
 
-
+@client.event
+async def on_ready():
+    print('Logged in as')
+    print(client.user.name)
+    print(client.user.id)
+    print('------')   
+    
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
@@ -88,17 +94,13 @@ async def on_message(message):
         
 
 
-@client.event
-async def on_ready():
-    print('Logged in as')
-    print(client.user.name)
-    print(client.user.id)
-    print('------')                       
+                    
 
 
 
     
 client.run(TOKEN)
+
 if __name__ == "__main__":
     client.run(TOKEN)
 #    app.run(host='0.0.0.0',port=os.environ['PORT'])
