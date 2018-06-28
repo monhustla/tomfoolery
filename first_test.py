@@ -30,6 +30,16 @@ async def on_message(message):
         await client.send_message(message.channel, msg)        
 
 @client.event
+async def on_message(message):
+    # we do not want the bot to reply to itself
+    if message.author == client.user:
+        return
+
+    if message.content.startswith('Who is king joey?'):
+        msg = 'King Joey is above the one above all. A pioneer, a savant, philanthropist, but most importantly he is the interpreter of the majestic 1992 Marvel Power Ranking Cards. Some say he is the Oracle of Delphi reincarnated, only time will tell.'.format(message)
+        await client.send_message(message.channel, msg)          
+
+@client.event
 async def on_ready():
     print('Logged in as')
     print(client.user.name)
