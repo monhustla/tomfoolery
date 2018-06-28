@@ -9,7 +9,7 @@ TOKEN = "NDM2NjczODQzMTAxMTcxNzMy.DhXOtA.zHQKVp9UKeFrCisivE4uUhQykeQ"
 
 client = discord.Client()
 
-@client.event
+
  
     
 @client.event
@@ -22,6 +22,16 @@ async def on_message(message):
     print(message.contents)
     print(message.author)
 
+    if ('daour') in message.content or ('@daour') in message.content or ('Daour') in message.content:
+    #if message.content.contains('@daour') or (message.content.contains('daour')):
+        print(message.author)
+        print(message.author.roles)
+        print ('{0.author.roles}')
+        msg = 'Frankie wishes he could take on daours knowledge'.format(message)
+        await client.send_message(message.channel, msg)  
+        return
+       
+    '''   
     if message.content.startswith('Strange '):
         msg = 'Hello {0.author.mention} I have been expecting you.'.format(message)
         await client.send_message(message.channel, msg)
@@ -32,7 +42,7 @@ async def on_message(message):
         msg = 'Either {0.author.mention}, or King Joey.'.format(message)
         await client.send_message(message.channel, msg)        
         return    
-       
+   '''    
     if message.content.startswith('Who is king joey?'):
         print(message.author)
         msg = 'King Joey is above the one above all. A pioneer, a savant, philanthropist, but most importantly he is the interpreter of the majestic 1992 Marvel Power Ranking Cards. Some say he is the Oracle of Delphi reincarnated, only time will tell.'.format(message)
@@ -43,47 +53,6 @@ async def on_message(message):
         msg = 'trying to add this role {0.author.roles}'.format(message)
         await client.send_message(message.channel, msg)         
         #print('role assignment')       
-        
-@client.event
-async def on_message(message):
-    # we do not want the bot to reply to itself
-    if message.author == client.user:
-        #print(client.user)
-        return
-
-    if message.content.startswith('Strange who is the king?'):
-        print(message.author)
-        msg = 'Either {0.author.mention}, or King Joey.'.format(message)
-        await client.send_message(message.channel, msg)        
-        return
-
-@client.event
-async def on_message(message):
-    # we do not want the bot to reply to itself
-    if message.author == client.user:
-        return
-
-    if message.content.startswith('Who is king joey?'):
-        print(message.author)
-        msg = 'King Joey is above the one above all. A pioneer, a savant, philanthropist, but most importantly he is the interpreter of the majestic 1992 Marvel Power Ranking Cards. Some say he is the Oracle of Delphi reincarnated, only time will tell.'.format(message)
-        await client.send_message(message.channel, msg) 
-        return
-
-@client.event
-async def on_message(message):
-    # we do not want the bot to reply to itself
-    if message.author == client.user:
-        #print(client.user)
-        return
-    
-    if ('daour') in message.content or ('@daour') in message.content or ('Daour') in message.content:
-    #if message.content.contains('@daour') or (message.content.contains('daour')):
-        print(message.author)
-        print(message.author.roles)
-        print ('{0.author.roles}')
-        msg = 'Frankie wishes he could take on daours knowledge'.format(message)
-        await client.send_message(message.channel, msg)  
-        return
 
         
 '''        
