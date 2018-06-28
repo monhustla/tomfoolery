@@ -1,5 +1,6 @@
 import discord
-
+from discord.ext.commands import Bot
+from discord.ext import commands
 from flask import Flask, request, abort
 
 app = Flask(__name__)
@@ -25,6 +26,8 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
+
+    
 client.run(TOKEN)
 if __name__ == "__main__":
     client.run(TOKEN)
