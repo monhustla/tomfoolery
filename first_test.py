@@ -36,7 +36,11 @@ async def on_message(message):
         msg = 'Hello {0.author.mention} I have been expecting you.'.format(message)
         await client.send_message(message.channel, msg)
         return
-
+    if ('cancer') in message.content:
+        print(message.author)
+        msg = 'Sataniel is cancer indeed.'.format(message)
+        await client.send_message(message.channel, msg)        
+        return      
     if ('Strange who is the king') in message.content:
         print(message.author)
         msg = 'Either {0.author.mention}, or King Joey.'.format(message)
