@@ -13,6 +13,7 @@ client = discord.Client()
 async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
+        print(client.user)
         return
 
     if message.content.startswith('Strange '):
@@ -23,6 +24,7 @@ async def on_message(message):
 async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
+        print(client.user)
         return
 
     if message.content.startswith('Strange who is the king?'):
@@ -43,6 +45,7 @@ async def on_message(message):
 async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
+        print(client.user)
         return
 
     if message.content.contains('@daour') or (message.content.contains('daour')):
