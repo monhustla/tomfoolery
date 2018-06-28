@@ -65,11 +65,11 @@ async def on_message(message):
         mention_role = 'poop'
         if 'poop' in mention_role:
             role = '0x7f88982147c8'
-async def alert(message, role):
-    await client.add_roles(message.author, role)
-    await client.send_message(message.channel, f'{message.server.default_role}, {message.author.mention} has been added to {role.mention}!!')
-
-
+#async def alert(message, role):
+        await client.add_roles(message.author, role)
+        await client.send_message(message.channel, f'{message.server.default_role}, {message.author.mention} has been added to {role.mention}!!')
+        
+'''
 @client.event
 async def on_message(message):
     if message.content.startswith('strange assign me'):
@@ -85,7 +85,7 @@ async def on_message(message):
                     if word.lower() in message.content.lower():
                         await alert(message, assigned_role)
                         return        
-                        
+'''                        
                        
 @client.event
 async def on_ready():
