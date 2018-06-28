@@ -31,7 +31,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)  
         return
        
-    '''   
+       
     if message.content.startswith('Strange '):
         msg = 'Hello {0.author.mention} I have been expecting you.'.format(message)
         await client.send_message(message.channel, msg)
@@ -42,7 +42,7 @@ async def on_message(message):
         msg = 'Either {0.author.mention}, or King Joey.'.format(message)
         await client.send_message(message.channel, msg)        
         return    
-   '''    
+       
     if message.content.startswith('Who is king joey?'):
         print(message.author)
         msg = 'King Joey is above the one above all. A pioneer, a savant, philanthropist, but most importantly he is the interpreter of the majestic 1992 Marvel Power Ranking Cards. Some say he is the Oracle of Delphi reincarnated, only time will tell.'.format(message)
