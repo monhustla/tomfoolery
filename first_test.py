@@ -5,7 +5,7 @@ TOKEN = "NDM2NjczODQzMTAxMTcxNzMy.DhXOtA.zHQKVp9UKeFrCisivE4uUhQykeQ"
 client = discord.CLIENT()
 
 @client.event
-async def on_message(message);
+async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
