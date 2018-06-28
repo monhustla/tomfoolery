@@ -52,6 +52,7 @@ async def on_message(message):
     if message.content.startswith('strange assign me'):
         #msg = 'trying to add this role {0.author.roles}'.format(message)
         #await client.send_message(message.channel, msg)   
+        author = message.author
         role_names = [role.name for role in author.roles]
         print(role_names)
         role = discord.utils.get(server.roles, name="test role 2")     
