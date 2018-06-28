@@ -56,6 +56,38 @@ async def on_message(message):
         msg = 'Frankie wishes he could take on daours knowledge'.format(message)
         await client.send_message(message.channel, msg)             
 
+# list of words to check for
+trigger_words = ['assign', 'assign me']
+
+# The ID# of the role to assign
+assigned_role_id = 'YOUR ROLE ID#'
+
+# bool, change if you want the filter to be case sensitive
+case_sensitive = True        
+        
+@client.event
+async def on_ready():        
+    print('on ready')
+async def alert(message, role):
+    await client.add_roles(message.author, role)
+    await client.send_message(message.channel, f'{message.server.default_role}, {message.author.mention} has been added to {role.mention}!!')
+
+
+@client.event
+async def on_message(message):
+    if message.content.startswith('strange assign me'):
+        assigned_role = discord.utils.get(
+            message.server.roles, id=assigned_role_id)
+        if assigned_role not in message.author.roles:
+            for word in trigger_words:
+                if case_sensitive:
+                    if word in message.content:
+                        await alert(message, assigned_role)
+                        return
+                else:
+                    if word.lower() in message.content.lower():
+                        await alert(message, assigned_role)
+                        return        
 @client.event
 async def on_ready():
     print('Logged in as')
