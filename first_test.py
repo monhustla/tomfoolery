@@ -54,7 +54,7 @@ async def on_message(message):
     #if message.content.contains('@daour') or (message.content.contains('daour')):
         print(message.author)
         print(message.author.roles)
-        print '{0.author.roles)
+        print '{0.author.roles}'
         msg = 'Frankie wishes he could take on daours knowledge'.format(message)
         await client.send_message(message.channel, msg)             
 
