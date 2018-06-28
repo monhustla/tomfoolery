@@ -37,7 +37,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
         return
 
-    if message.content.startswith('Strange who is the king?'):
+    if ('Strange who is the king') in message.content:
         print(message.author)
         msg = 'Either {0.author.mention}, or King Joey.'.format(message)
         await client.send_message(message.channel, msg)        
