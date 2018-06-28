@@ -19,7 +19,7 @@ async def on_message(message):
         #print(client.user)
         return
      
-    print(message.contents)
+    print(message.content)
     print(message.author)
 
     if ('daour') in message.content or ('@daour') in message.content or ('Daour') in message.content:
