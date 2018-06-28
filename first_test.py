@@ -61,7 +61,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)             
 
         
-'''        
+        
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
@@ -71,10 +71,10 @@ async def on_message(message):
     if message.content.startswith('strange assign me'):
         print('role assignment')
         role = '0x7f88982147c8'       
-        msg = message.server.default_role
-        await client.add_roles(message.author, role)
+        msg = 'trying to add this role {0.author.roles}'.format(message)
         await client.send_message(message.channel, msg) 
-'''
+        #await client.add_roles(message.author, role)
+        
 
 
 @client.event
