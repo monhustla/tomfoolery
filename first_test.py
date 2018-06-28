@@ -74,12 +74,13 @@ async def on_message(message):
     if message.author == client.user:
         #print(client.user)
         return
-
+    
+    '''
     if message.content.startswith('strange assign me'):
         msg = 'trying to add this role {0.author.roles}'.format(message)
         await client.send_message(message.channel, msg)         
         #print('role assignment')
-        '''
+        
         try:
             role = '0x7f88982147c8'       
             msg = 'trying to add this role {0.author.roles}'.format(message)
