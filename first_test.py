@@ -61,7 +61,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)             
 
         
-        
+'''        
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
@@ -74,6 +74,7 @@ async def on_message(message):
         msg = message.server.default_role
         await client.add_roles(message.author, role)
         await client.send_message(message.channel, msg) 
+'''
 
 
 @client.event
