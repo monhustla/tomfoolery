@@ -60,20 +60,28 @@ async def on_message(message):
         msg = 'Frankie wishes he could take on daours knowledge'.format(message)
         await client.send_message(message.channel, msg)             
 
-'''     
+        
+        
 @client.event
 async def on_message(message):
     if message.author == client.user:
         #print(client.user)
-        return
-    
+        return 
+
     if message.content.startswith('strange assign me'):
+        print('role assignment')
         mention_role = 'poop'
         if 'poop' in mention_role:
-            role = '0x7f88982147c8'
-#async def alert(message, role):
+            role = '0x7f88982147c8'       
             await client.add_roles(message.author, role)
-            await client.send_message(message.channel, f'{message.server.default_role}, {message.author.mention} has been added to {role.mention}!!')
+            await client.send_message(message.channel, f'{message.server.default_role}, {message.author.mention} has been added to {role.mention}!!')    
+'''     
+
+
+    
+
+#async def alert(message, role):
+            
         
 
 @client.event
