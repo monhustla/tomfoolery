@@ -1,5 +1,8 @@
 import discord
 
+from flask import Flask, request, abort
+
+app = Flask(__name__)
 TOKEN = "NDM2NjczODQzMTAxMTcxNzMy.DhXOtA.zHQKVp9UKeFrCisivE4uUhQykeQ"
 
 client = discord.Client()
@@ -22,3 +25,5 @@ async def on_ready():
     print('------')
 
 client.run(TOKEN)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0',port=os.environ['PORT'])
