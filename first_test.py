@@ -53,9 +53,10 @@ async def on_message(message):
     if ('daour') in message.content or ('@daour') in message.content or ('Daour') in message.content:
     #if message.content.contains('@daour') or (message.content.contains('daour')):
         print(message.author)
+        print(message.author.roles)
         msg = 'Frankie wishes he could take on daours knowledge'.format(message)
         await client.send_message(message.channel, msg)             
-
+'''
 # list of words to check for
 trigger_words = ['assign', 'assign me']
 
@@ -64,7 +65,13 @@ assigned_role_id = 'YOUR ROLE ID#'
 
 # bool, change if you want the filter to be case sensitive
 case_sensitive = True        
-        
+    def top_role(self):
+        """Returns the member's highest role.
+        This is useful for figuring where a member stands in the role
+        hierarchy chain.
+        """
+
+        return self.roles[-1]        
 @client.event
 async def on_ready():        
     print('on ready')
@@ -88,6 +95,8 @@ async def on_message(message):
                     if word.lower() in message.content.lower():
                         await alert(message, assigned_role)
                         return        
+                        
+'''                        
 @client.event
 async def on_ready():
     print('Logged in as')
