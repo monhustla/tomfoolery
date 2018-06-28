@@ -22,7 +22,7 @@ async def on_message(message):
     if message.content.startswith('Strange '):
         msg = 'Hello {0.author.mention} I have been expecting you.'.format(message)
         await client.send_message(message.channel, msg)
-       return
+        return
         
 @client.event
 async def on_message(message):
