@@ -59,7 +59,8 @@ async def on_message(message):
         print(message.author.roles)
         print ('{0.author.roles}')
         msg = 'Frankie wishes he could take on daours knowledge'.format(message)
-        await client.send_message(message.channel, msg)             
+        await client.send_message(message.channel, msg)  
+        return
 
         
 '''        
@@ -98,7 +99,8 @@ async def on_ready():
     print('Logged in as')
     print(client.user.name)
     print(client.user.id)
-    print('------') 
+    print('------')
+    return
 
 client.run(TOKEN)
 
