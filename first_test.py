@@ -10,12 +10,7 @@ TOKEN = "NDM2NjczODQzMTAxMTcxNzMy.DhXOtA.zHQKVp9UKeFrCisivE4uUhQykeQ"
 client = discord.Client()
 
 
-@client.event
-async def on_ready():
-    print('Logged in as')
-    print(client.user.name)
-    print(client.user.id)
-    print('------')   
+ 
     
 @client.event
 async def on_message(message):
@@ -67,7 +62,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)             
 
         
-        
+'''        
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
@@ -75,7 +70,7 @@ async def on_message(message):
         #print(client.user)
         return
     
-    '''
+    
     if message.content.startswith('strange assign me'):
         msg = 'trying to add this role {0.author.roles}'.format(message)
         await client.send_message(message.channel, msg)         
@@ -95,7 +90,7 @@ async def on_message(message):
         except:
             msg = 'somethign wrong happened assigning this role {0.author.roles}'.format(message)
             await client.send_message(message.channel, msg)      
-        '''
+'''
        
     
 @client.event
@@ -105,11 +100,6 @@ async def on_ready():
     print(client.user.id)
     print('------') 
 
-                    
-
-
-
-    
 client.run(TOKEN)
 
 if __name__ == "__main__":
