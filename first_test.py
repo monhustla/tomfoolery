@@ -1,9 +1,9 @@
 import discord
 from discord.ext.commands import Bot
 from discord.ext import commands
-from flask import Flask, request, abort
+#from flask import Flask, request, abort
 
-app = Flask(__name__)
+#app = Flask(__name__)
 
 TOKEN = "NDM2NjczODQzMTAxMTcxNzMy.DhXOtA.zHQKVp9UKeFrCisivE4uUhQykeQ"
 
@@ -31,4 +31,4 @@ async def on_ready():
 client.run(TOKEN)
 if __name__ == "__main__":
     client.run(TOKEN)
-    app.run(host='0.0.0.0',port=os.environ['PORT'])
+#    app.run(host='0.0.0.0',port=os.environ['PORT'])
