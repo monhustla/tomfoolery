@@ -1,1 +1,1 @@
-bot: python first_test.py
+bot: python first_test.py $PORT
