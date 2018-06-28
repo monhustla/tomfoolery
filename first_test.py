@@ -9,12 +9,7 @@ TOKEN = "NDM2NjczODQzMTAxMTcxNzMy.DhXOtA.zHQKVp9UKeFrCisivE4uUhQykeQ"
 
 client = discord.Client()
 
-@client.event
-async def on_ready():
-    print('Logged in as')
-    print(client.user.name)
-    print(client.user.id)
-    print('------')
+
 
 @client.event
 async def on_message(message):
@@ -65,7 +60,7 @@ async def on_message(message):
         msg = 'Frankie wishes he could take on daours knowledge'.format(message)
         await client.send_message(message.channel, msg)             
 
-     
+'''     
 @client.event
 async def on_message(message):
     if message.author == client.user:
@@ -80,7 +75,7 @@ async def on_message(message):
             await client.add_roles(message.author, role)
             await client.send_message(message.channel, f'{message.server.default_role}, {message.author.mention} has been added to {role.mention}!!')
         
-'''
+
 @client.event
 async def on_message(message):
     if message.content.startswith('strange assign me'):
@@ -96,8 +91,16 @@ async def on_message(message):
                     if word.lower() in message.content.lower():
                         await alert(message, assigned_role)
                         return        
-'''                        
-                       
+'''    
+
+
+
+@client.event
+async def on_ready():
+    print('Logged in as')
+    print(client.user.name)
+    print(client.user.id)
+    print('------')                       
 
 
 
