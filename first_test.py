@@ -56,12 +56,12 @@ async def on_message(message):
         print(message.author.roles)
         msg = 'Frankie wishes he could take on daours knowledge'.format(message)
         await client.send_message(message.channel, msg)             
-'''
+
 # list of words to check for
 trigger_words = ['assign', 'assign me']
 
 # The ID# of the role to assign
-assigned_role_id = 'YOUR ROLE ID#'
+assigned_role_id = '0x7f88988aa480'
 
 # bool, change if you want the filter to be case sensitive
 case_sensitive = True        
@@ -96,7 +96,7 @@ async def on_message(message):
                         await alert(message, assigned_role)
                         return        
                         
-'''                        
+                       
 @client.event
 async def on_ready():
     print('Logged in as')
