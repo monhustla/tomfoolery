@@ -64,43 +64,16 @@ async def on_message(message):
         
 @client.event
 async def on_message(message):
+    # we do not want the bot to reply to itself
     if message.author == client.user:
-        #print(client.user)
         return 
 
     if message.content.startswith('strange assign me'):
         print('role assignment')
-        mention_role = 'poop'
-        if 'poop' in mention_role:
-            role = '0x7f88982147c8'       
-            await client.add_roles(message.author, role)
-            await client.send_message(message.channel, f'{message.server.default_role}, {message.author.mention} has been added to {role.mention}!!')    
-'''     
-
-
-    
-
-#async def alert(message, role):
-            
-        
-
-@client.event
-async def on_message(message):
-    if message.content.startswith('strange assign me'):
-        assigned_role = discord.utils.get(
-            message.server.roles, id=assigned_role_id)
-        if assigned_role not in message.author.roles:
-            for word in trigger_words:
-                if case_sensitive:
-                    if word in message.content:
-                        await alert(message, assigned_role)
-                        return
-                else:
-                    if word.lower() in message.content.lower():
-                        await alert(message, assigned_role)
-                        return        
-'''    
-
+        role = '0x7f88982147c8'       
+        msg = message.server.default_role
+        await client.add_roles(message.author, role)
+        await client.send_message(message.channel, msg) 
 
 
 @client.event
