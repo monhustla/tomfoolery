@@ -55,7 +55,7 @@ async def on_message(message):
         author = message.author
         role_names = [role.name for role in author.roles]
         print(role_names)
-        role = discord.utils.get(message.server.roles, name="test role 2")     
+        role = discord.utils.get(message.server.roles, name="teest role 1")     
         msg = 'trying to add this role {0.author.roles}'.format(message)
         await client.add_roles(message.author, role)           
         await client.send_message(message.channel, msg) 
