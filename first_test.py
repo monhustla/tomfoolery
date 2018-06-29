@@ -31,7 +31,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)  
         return
        
-       
+    '''   
     if message.content.startswith('Hi Strange'):
         msg = 'Hello {0.author.mention} I have been expecting you.'.format(message)
         await client.send_message(message.channel, msg)
@@ -55,7 +55,7 @@ async def on_message(message):
         msg = 'King Joey is above the one above all. A pioneer, a savant, philanthropist, but most importantly he is the interpreter of the majestic 1992 Marvel Power Ranking Cards. Some say he is the Oracle of Delphi reincarnated, only time will tell.'.format(message)
         await client.send_message(message.channel, msg) 
         return     
-
+    ''' 
     if message.content.startswith('strange assign me'):
         #msg = 'trying to add this role {0.author.roles}'.format(message)
         #await client.send_message(message.channel, msg)   
@@ -70,35 +70,8 @@ async def on_message(message):
         return
 
         
-'''        
-@client.event
-async def on_message(message):
-    # we do not want the bot to reply to itself
-    if message.author == client.user:
-        #print(client.user)
-        return
-    
-    
-    if message.content.startswith('strange assign me'):
-        msg = 'trying to add this role {0.author.roles}'.format(message)
-        await client.send_message(message.channel, msg)         
-        #print('role assignment')
-        
-        try:
-            role = '0x7f88982147c8'       
-            msg = 'trying to add this role {0.author.roles}'.format(message)
-            await client.send_message(message.channel, msg) 
-            #await client.add_roles(message.author, role)
-            @client.event
-            async def on_ready():
-                print('Logged in as')
-                print(client.user.name)
-                print(client.user.id)
-                print('------')   
-        except:
-            msg = 'somethign wrong happened assigning this role {0.author.roles}'.format(message)
-            await client.send_message(message.channel, msg)      
-'''
+      
+  
        
     
 @client.event
